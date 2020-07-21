@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">T2</string>
+    <string name="startMd">加密</string>
+    <string name="加密前">加密前</string>
+    <string name="加密后" />
+    <string name="main_hint_txt">友情提示：长按可复制密码</string>
+    <string name="iten_name_hint">名称：</string>
+    <string name="item_pasword_hint">密码：</string>
+    <string name="item_keymgmt_hint">加密方式：</string>
+    <string name="copy_success">密码复制成功</string>
+    <string name="not_root_hint">请先获取Root权限...</string>
+    <string name="not_root_hint_txt">请确保本程序已获取Root权限，本软件为开源项目，绝对保证无安全隐患，请从正规渠道下载!!!</string>
+    <string name="empty_password">无密码</string>
+    <string name="qrcode_tip">用相机扫描即可连接</string>
+    <string name="choiselinklist">选择</string>
+
+    <string-array name="shortlinklist">
+        <item>百度</item>
+        <item>新浪</item>
+    </string-array>
+</resources>

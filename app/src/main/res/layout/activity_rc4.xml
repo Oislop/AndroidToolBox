@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RC4Activity">
+
+    <EditText
+        android:id="@+id/textB"
+        android:layout_width="308dp"
+        android:layout_height="206dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginBottom="8dp"
+        android:background="@null"
+        android:gravity="start"
+        android:hint="输入要加密字符"
+        app:layout_constraintBottom_toTopOf="@+id/textV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/textV"
+        android:layout_width="113dp"
+        android:layout_height="49dp"
+
+        android:layout_marginBottom="36dp"
+        android:background="@null"
+        android:hint=" 请输入密钥.."
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/textA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textA"
+        android:layout_width="308dp"
+        android:layout_height="206dp"
+        android:layout_marginBottom="72dp"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:hint="加密结果"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="37dp"
+        android:text="加密"
+        android:onClick="onRC4"
+        app:layout_constraintBottom_toTopOf="@+id/textA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textB"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="36dp"
+        android:text="解密"
+        android:onClick="onDisRC4"
+        app:layout_constraintBottom_toTopOf="@+id/textA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textB"
+        app:layout_constraintVertical_bias="0.966" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        tools:ignore="MissingConstraints" />
+</android.support.constraint.ConstraintLayout>

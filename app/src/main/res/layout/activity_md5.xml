@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_all"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MD5Activity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="10dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        tools:ignore="MissingConstraints" />
+
+
+    <EditText
+        android:id="@+id/textB"
+        android:layout_width="314dp"
+        android:layout_height="214dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="13dp"
+        android:autofillHints=""
+        android:background="@null"
+        android:gravity="start"
+        android:inputType=""
+        android:textColor="@color/colorBlack"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textA"
+        android:layout_width="314dp"
+        android:layout_height="209dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="55dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="161dp"
+        android:layout_marginBottom="65dp"
+        android:onClick="onMD5"
+        android:text="@string/startMd"
+        app:layout_constraintBottom_toTopOf="@+id/textA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textB" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="47dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="318dp"
+        android:layout_marginBottom="7dp"
+        android:text="@string/加密前"
+        app:layout_constraintBottom_toTopOf="@+id/textB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="123dp"
+        android:layout_marginEnd="315dp"
+        android:text="加密后"
+        app:layout_constraintBottom_toTopOf="@+id/textA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textB" />
+</android.support.constraint.ConstraintLayout>

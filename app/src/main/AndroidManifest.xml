@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.t2">
+    <!-- 允许应用程序获取网络信 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 允许程序访问相机 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" /> <!-- 允许程序修改全局音频设置 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" /> <!-- 允许程序录制音频 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- sd卡获得写的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 允许访问闪光灯 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" /> <!-- 允许程序保持进程不进入休眠状态 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="ACCESS_SUPERUSER" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.2"/>
+        <!--小米手机开启刘海适配-->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape"/>
+        <!--华为手机开启刘海适配-->
+        <meta-data android:name="android.notch_support" android:value="true"/>
+
+
+        <activity android:name=".shortLink.shortLinkActivity"></activity>
+        <activity android:name=".WifiActivity" />
+        <activity android:name=".Wifi.QRCodeView" />
+        <activity android:name=".NoiseActivity" />
+        <activity android:name=".RC4Activity" />
+        <activity android:name=".MD5Activity"
+            android:label="MD5加密"/>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+
+
+</manifest>
